@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <div class="box">
+        <form>
+            <div  id="information">
+          <h1>Інформація про замовлення</h1>
+
+          <div class="item">
+            <p>Ваше ім'я</p>
+            <div class="name-class">
+              <input type="text" id="surname" placeholder="Прізвище" />
+              <input type="text" id="name" placeholder="ім'я" />
+              <div class="error" id="name-error"></div>
+            </div>
+          </div>
+
+          <div class="item">
+            <p>Адреса доставки</p>
+            <input type="text" id="city" placeholder="Місто, вулиця, будинок, квартира"/>
+            <div class="address">
+              <input type="text" id="district" placeholder="Район" />
+              <input type="text" id="region" placeholder="Область" />
+              <input type="text" id="postal-code" placeholder="Поштовий індекс" />
+              <select id="country">
+                <option value="Україна" selected >Україна</option>
+                <option value="Польща">Польща</option>
+                <option value="Америка">Америка</option>
+              </select>
+            </div>
+            <div class="error" id="address-error"></div>
+          </div>
+
+          <div class="item">
+            <p>Телефон</p>
+            <input type="tel" id="phone" placeholder="380000000000" pattern="[0-9]{12}"/>
+            <div class="error" id="tel-error"></div>
+          </div>
+          
+          <div class="item">
+            <p>E-mail</p>
+            <input type="email" id="email" name="name" placeholder="example@gmail.com"/>
+            <div class="error" id="email-error"></div>
+          </div>
+
+          <div class="item">
+            <p>Очікувана дата доставки</p>
+            <input type="date" id="date"/>
+          </div>
+
+          <div class="item">
+            <p>Колір товару</p>
+            <input type="color" id="color"/>
+          </div>
+
+          <div class="item">
+            <p>Довжина кабелю</p>
+            <input type="number" min="1" max="10" value="1" id="length"/>
+          </div>
+
+          <div class="item" id="connector">
+            <p>Тип роз'єму</p>
+            <input type="radio" id="Type-C" value="Type C" name="conn" checked/>
+            <label for="Type-C">Type C</label>
+            <input type="radio" id="Micro-usb" value="Micro usb" name="conn"/>
+            <label for="Micro-usb">Micro usb</label>
+            <input type="radio" id="Mini-usb" value="Mini usb" name="conn"/>
+            <label for="Mini-usb">Mini usb</label>
+          </div>
+          
+          <div class="item">
+            <p>Додаткові побажання</p>
+            <textarea rows="5" id="additionally"></textarea>
+          </div>
+
+          <div class="item">
+            <p id="price">Ціна: </p>
+          </div>
+
+          <div class="btn">
+            <button type="button" id="continue">Продовжити</button>
+          </div>
+        </div>
+
+        <div id="payment">
+        
+          <h1>Оплата</h1>
+
+          <div class="item">
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+          </div>
+
+          <div class="item">
+            <p>Ім'я власника карти</p>
+            <input type="text" id="card-name" placeholder="Ім'я"/>
+          </div>
+
+          <div class="item">
+            <p>Номер карти</p>
+            <input type="text" id="card-number" placeholder="1111-2222-3333-4444" pattern="[0-9]{16}"/>
+          </div>
+
+          <div class="item">
+            <p>Термін дії</p>
+            <input type="month" id="card-exp"/>
+          </div>
+
+          <div class="item">
+            <p>CVV</p>
+            <input type="text" id="card-cvv" placeholder="000" pattern="[0-9]{3}"/>
+          </div>
+
+          <div class="btn">
+            <button type="button" id="pay">Оплатити</button>
+          </div>
+        </div>
+        </form>
+      </div>
+</body>
+</html>
